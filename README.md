@@ -3,7 +3,7 @@ This web application allows you to perform basic CRUD operations (Create, Read, 
 
 ## Features
 - Add new products to the list
-- View all products in a dynamic table
+- View all products in a dynamic interface
 - Edit existing product details
 - Delete products from the list
 - Responsive and user-friendly interface
