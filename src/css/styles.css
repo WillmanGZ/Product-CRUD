@@ -53,15 +53,20 @@ main {
   flex-direction: column;
   gap: 1rem;
 }
-#add-product-form input {
+#add-product-form input,
+#add-product-form textarea {
   padding: 0.7rem 1rem;
   border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 1rem;
   outline: none;
   transition: border 0.2s;
+  resize: vertical;
+  min-height: 44px;
+  max-height: 180px;
 }
-#add-product-form input:focus {
+#add-product-form input:focus,
+#add-product-form textarea:focus {
   border: 1.5px solid #007bff;
 }
 #add-product-form button {
