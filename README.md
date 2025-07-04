@@ -15,7 +15,7 @@ This web application allows you to perform basic CRUD operations (Create, Read, 
    npm install
    npm install -g json-server
    ```
-3. Start the JSON Server with the provided database (e.g., `public/database.json`):
+3. Start the JSON Server with the provided database (e.g., `database.json`):
    ```bash
    json-server --watch public/database.json --port 3000
    ```
