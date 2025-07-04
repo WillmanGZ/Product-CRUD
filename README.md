@@ -15,9 +15,9 @@ This web application allows you to perform basic CRUD operations (Create, Read, 
    npm install
    npm install -g json-server
    ```
-3. Start the JSON Server with the provided database (e.g., `db.json`):
+3. Start the JSON Server with the provided database (e.g., `public/database.json`):
    ```bash
-   json-server --watch db.json --port 3000
+   json-server --watch public/database.json --port 3000
    ```
 4. Start the Vite development server:
    ```bash

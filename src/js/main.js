@@ -63,7 +63,6 @@ function renderProducts(products) {
     const card = document.createElement("div");
     card.className = "product-card";
 
-    // Imagen
     let imgHtml = "";
     if (product.imageUrl && product.imageUrl.trim() !== "") {
       imgHtml = `<img src="${product.imageUrl}" alt="${product.name}" />`;
@@ -183,7 +182,6 @@ async function editProduct(productId) {
   });
 
   if (formValues) {
-    // Actualizar producto en la API
     const response = await fetch(apiUrl + `/${productId}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
@@ -256,7 +254,6 @@ function isValidProduct(product) {
   const description = product.description;
   const imageUrl = product.imageUrl;
 
-  // Name: required, min 2 chars
   if (!name || name.length < 2) {
     Toast.fire({
       icon: "error",
@@ -265,7 +262,7 @@ function isValidProduct(product) {
     productNameInput.focus();
     return false;
   }
-  // Price: required, must be a positive number
+
   if (!price || isNaN(price) || Number(price) <= 0) {
     Toast.fire({
       icon: "error",
@@ -274,7 +271,7 @@ function isValidProduct(product) {
     productPriceInput.focus();
     return false;
   }
-  // Description: required, min 5 chars
+
   if (!description || description.length < 5) {
     Toast.fire({
       icon: "error",
@@ -284,7 +281,7 @@ function isValidProduct(product) {
     productDescriptionInput.focus();
     return false;
   }
-  // Image URL: optional, but if present must be a valid URL
+
   if (imageUrl && !/^https?:\/\/.+\..+/.test(imageUrl)) {
     Toast.fire({
       icon: "error",
